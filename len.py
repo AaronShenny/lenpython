@@ -17,6 +17,8 @@ def len3(value):
             raise TypeError("Object of type {} has no len()".format(type(value)))
     return num
 
-value = input('Enter a value : ')   
+value = input('Enter a value : ')
+if value[0] == '[' or  value[0] == '(':
+    value = eval(value)
 len1 = len(value)
 print(len1)
